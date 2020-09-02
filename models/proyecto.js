@@ -5,4 +5,4 @@ let proyectoSchema = new Schema({
     titulo: String
 });
 
-module.export = mongoose.model('Proyecto', proyectoSchema);
+module.exports = mongoose.model('Proyecto', proyectoSchema);
