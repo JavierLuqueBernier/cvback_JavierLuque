@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-router.get('/proyectos', (req, res) => {
-    res.send('Hola, estás dentro del API');
-})
+const apiRouterProyectos = require ('./api/proyectos');
+
+router.use('/proyectos', apiRouterProyectos);
 
 module.exports = router;
