@@ -3,7 +3,9 @@ const app = express(); /* llamada a la funcion de express */
 
 require('dotenv').config();
 
-app.use('/api', )
+const apiRouter = require('./routes/api');
+
+app.use('/api', apiRouter);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
