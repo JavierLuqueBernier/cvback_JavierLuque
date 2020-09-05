@@ -1,5 +1,13 @@
-GET http://localhost:3000/
+GET http://localhost:3000/api/proyectos
 
 ###
 
-GET http://localhost:3000/api/proyectos
+POST http://localhost:3000/api/proyectos
+
+###
+
+PUT http://localhost:3000/api/proyectos
+
+###
+
+DELETE http://localhost:3000/api/proyectos
