@@ -11,6 +11,10 @@ router.get('/', (req, res) => {
         console.log(err);
     })
     res.send('estoy donde tengo que estar');
-})
+});
+
+router.post('/', (req, res) => {
+    res.send('Estoy dentro del post');
+});
 
 module.exports = router;
