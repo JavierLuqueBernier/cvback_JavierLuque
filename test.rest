@@ -3,6 +3,11 @@ GET http://localhost:3000/api/proyectos
 ###
 
 POST http://localhost:3000/api/proyectos
+Content-Type: application/json
+
+{
+    "titulo": "Proyecto de prueba"
+}
 
 ###
 
