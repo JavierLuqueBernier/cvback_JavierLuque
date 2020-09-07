@@ -6,7 +6,11 @@ POST http://localhost:3000/api/proyectos
 Content-Type: application/json
 
 {
-    "titulo": "Proyecto de prueba"
+    "titulo": "Proyecto de prueba",
+    "descripcion": "Esta es la descripcion",
+    "url": "http://www.google.es",
+    "cliente": "Google",
+    "url_cliente": "http://www.google.com/quien-somos"
 }
 
 ###
