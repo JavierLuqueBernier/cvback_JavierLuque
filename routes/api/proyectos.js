@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
     res.send('estoy donde tengo que estar');
 });
 
-router.post('/', (req, res) => {
-    Proyecto.create(req.body)
+router.post('/', async (req, res) => {
+    const  nuevoProyecto = await Proyecto.create(req.body)
     res.send('Estoy dentro del post');
 });
 
