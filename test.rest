@@ -6,7 +6,7 @@ POST http://localhost:3000/api/proyectos
 Content-Type: application/json
 
 {
-    "titulo": "Proyecto de prueba",
+    "titulo": "Proyecto de prueba2",
     "descripcion": "Esta es la descripcion",
     "url": "http://www.google.es",
     "cliente": "Google",
@@ -15,8 +15,17 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:3000/api/proyectos
+PUT http://localhost:3000/api/proyectos/5f565860fcfab438a8c2a635
+Content-Type: application/json
+
+{
+    "titulo": "Proyecto editado",
+    "descripcion": "Esta es la descripcion",
+    "url": "http://www.google.es",
+    "cliente": "Google",
+    "url_cliente": "http://www.google.com/quien-somos"
+}
 
 ###
 
-DELETE http://localhost:3000/api/proyectos
+DELETE http://localhost:3000/api/proyectos/5f565c03ae1a373658ab7487
