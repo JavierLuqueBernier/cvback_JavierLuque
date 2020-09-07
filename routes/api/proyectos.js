@@ -13,7 +13,16 @@ router.get('/', async (req, res) => {
     
 });
 
-router.post('/', async (req, res) => {
+router.post('/', [
+    check('titulo').not().isEmpty()
+
+], async (req, res) => {
+    
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).json({ errors: errors.array() });
+    }
+
     try {
         const nuevoProyecto = await Proyecto.create(req.body)
     } catch {
