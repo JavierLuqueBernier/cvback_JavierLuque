@@ -3,8 +3,13 @@ const router = require('express').Router();
 const Proyecto = require('../../models/proyecto');
 
 router.get('/', async (req, res) => {
-    const proyectos = await Proyecto.find();
-    res.json(proyectos);
+    try {
+        const proyectos = await Proyecto.find();
+        res.json(proyectos);
+    } catch (err) {
+        res.json({ 'error': err});
+    }
+    
 });
 
 router.post('/', async (req, res) => {
