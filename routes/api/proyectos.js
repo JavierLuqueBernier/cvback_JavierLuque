@@ -39,7 +39,7 @@ router.post('/', [
 
 router.put('/:proyectoId', async (req, res) => {
     try {
-        const proyectoEditado = await Proyecto.findByIdAndUpdate(req.params.proyectoId, req.body);
+        const proyectoEditado = await Proyecto.findByIdAndUpdate(req.params.proyectoId, req.body, { new: true });
             res.json(proyectoEditado);
     } catch {
         res.status(503).json({ 'error': err});
