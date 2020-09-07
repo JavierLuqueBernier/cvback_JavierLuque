@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         const proyectos = await Proyecto.find();
         res.json(proyectos);
     } catch (err) {
-        res.json({ 'error': err});
+        res.status(503).json({ 'error': err});
     }
     
 });
@@ -33,7 +33,7 @@ router.post('/', [
     try {
         const nuevoProyecto = await Proyecto.create(req.body)
     } catch {
-        res.json({ 'error': err});
+        res.status(503).json({ 'error': err});
     }
    
 });
