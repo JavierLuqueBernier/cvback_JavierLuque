@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { check, validationResult } = require('express-validator');
 
 const Proyecto = require('../../models/proyecto');
 
