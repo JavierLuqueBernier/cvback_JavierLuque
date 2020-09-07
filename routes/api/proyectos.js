@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
     const  nuevoProyecto = await Proyecto.create(req.body)
-    res.send('Estoy dentro del post');
+    res.json(nuevoProyecto);
 });
 
 module.exports = router;

@@ -6,7 +6,7 @@ let proyectoSchema = new Schema({
     descripcion: String,
     url: String,
     cliente: String,
-    urlCliente: String
+    url_cliente: String
 });
 
 module.exports = mongoose.model('Proyecto', proyectoSchema);
