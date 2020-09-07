@@ -34,8 +34,26 @@ router.post('/', [
         const nuevoProyecto = await Proyecto.create(req.body)
     } catch {
         res.status(503).json({ 'error': err});
+    }   
+});
+
+router.put('/:proyectoId', async (req, res) => {
+    try {
+        const proyectoEditado = await Proyecto.findByIdAndUpdate(req.params.proyectoId, req.body);
+            res.json(proyectoEditado);
+    } catch {
+        res.status(503).json({ 'error': err});
     }
-   
+});
+
+router.delete('/:proyectoId', async (req, res) => {
+    try {
+        const proyectoBorrado = await Proyecto.findByIdAndDelete(req.params.proyectoId);
+        res.json(proyectoBorrado);
+    } catch {
+        res.status(503).json({ 'error': err});
+    }
+    
 });
 
 module.exports = router;
