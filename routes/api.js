@@ -4,4 +4,8 @@ const apiRouterProyectos = require ('./api/proyectos');
 
 router.use('/proyectos', apiRouterProyectos);
 
+router.get('/token', (req, res) => {
+
+});
+
 module.exports = router;
