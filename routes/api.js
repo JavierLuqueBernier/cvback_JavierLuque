@@ -3,8 +3,9 @@ const moment = require('moment');
 const jwt = require('jwt-simple');
 
 const apiRouterProyectos = require ('./api/proyectos');
+const middlewares = require ('./midlewares');
 
-router.use('/proyectos', apiRouterProyectos);
+router.use('/proyectos', middlewares.checkToken, apiRouterProyectos);
 
 router.get('/token', (req, res) => {
     let payload = {
