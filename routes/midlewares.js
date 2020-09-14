@@ -14,7 +14,7 @@ exports.checkToken = (req, res, next) => {
         return res.status(403).json({ error: 'El token incluido es incorrecto'});
     }
 
-    if(payload.expiredAt > moment().unix()) {
+    if(payload.expiredAt < moment().unix()) {
         return res.status(403).json({ error: 'El token ha expirado' });
     }
 
