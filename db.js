@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const urlMongo = 'mongodb+srv://javier_luque:tarragona@cluster0.pr5sz.mongodb.net/test';
+const urlMongo = process.env.MONGO_URL;
 
 const config = {
     useNewUrlParser: true,
