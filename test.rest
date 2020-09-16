@@ -1,16 +1,18 @@
 GET http://localhost:3000/api/proyectos
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAxNzc5MTYsImV4cGlyZWRBdCI6MTYwMDE3ODIxNn0.Hm05mc02zPznsLtAVLAKqaaslDwT-m2CUKHlele1qCc
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDMyNDUsImV4cGlyZWRBdCI6MTYwMDI0MzU0NX0.GGj7ODZBhhregb40L5KPhUUtty4Im_BQiSi2SWFN0Qg
 ###
 
 POST http://localhost:3000/api/proyectos
 Content-Type: application/json
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDI5MTcsImV4cGlyZWRBdCI6MTYwMDI0MzIxN30.no8q32OmnwdwxjDi4zzwmOynJafoH1CdVFCFiDGeEd0
 
 {
-    "titulo": "Proyecto de prueba2",
-    "descripcion": "Esta es la descripcion",
+    "titulo": "CV Web",
+    "descripcion": "Creación de CV Web",
     "url": "http://www.google.es",
-    "cliente": "Google",
-    "url_cliente": "http://www.google.com/quien-somos"
+    "cliente": "Javier Luque",
+    "url_cliente": "http://www.google.com/quien-somos",
+    "categoria": "wordpress"
 }
 
 ###
