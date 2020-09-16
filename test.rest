@@ -1,5 +1,9 @@
 GET http://localhost:3000/api/proyectos
 access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDMyNDUsImV4cGlyZWRBdCI6MTYwMDI0MzU0NX0.GGj7ODZBhhregb40L5KPhUUtty4Im_BQiSi2SWFN0Qg
+
+###
+GET http://localhost:3000/api/proyectos/angular
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
 ###
 
 POST http://localhost:3000/api/proyectos

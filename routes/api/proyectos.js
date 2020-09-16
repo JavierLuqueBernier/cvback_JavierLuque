@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
 router.get('/:categoria', async (req, res) => {
     try {
-        const proyecto = await Proyecto.find({ categoria: req.params.categoria });
+        const proyectos = await Proyecto.find({ categoria: req.params.categoria });
         res.json(proyectos);
     } catch(err) {
         res.status(503).json({ 'error': err});
