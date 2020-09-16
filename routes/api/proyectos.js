@@ -16,9 +16,11 @@ router.get('/', async (req, res) => {
 router.post('/', [
     check('titulo', 'El titulo debe incluirse en la peticion y tener un máximo de 40 caracteres')
     .exists()
+    .notEmpty()
     .isLength({max: 40 }),
     check('descripcion', 'El descripcion debe incluirse en la peticion y tener un máximo de 300 caracteres')
     .exists()
+    .notEmpty()
     .isLength({ max: 300 }),
     check('url', 'La URL del proyecto debe estar correcta')
     .isURL()
