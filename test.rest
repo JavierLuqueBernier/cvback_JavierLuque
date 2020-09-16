@@ -31,5 +31,12 @@ Content-Type: application/json
 DELETE http://localhost:3000/api/proyectos/5f565c03ae1a373658ab7487
 
 ###
-
 GET http://localhost:3000/api/token
+
+### PRODUCCIÓN
+GET https://cvback-javierluque.herokuapp.com/api/proyectos
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDE2ODAsImV4cGlyZWRBdCI6MTYwMDI0MTk4MH0.c08HXmbtSjF3TJUcQ4FyJQcgbIz2GEtrKyibAMe2lek
+
+###
+GET https://cvback-javierluque.herokuapp.com/api/token
+
