@@ -1,14 +1,14 @@
 GET http://localhost:3000/api/proyectos
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDMyNDUsImV4cGlyZWRBdCI6MTYwMDI0MzU0NX0.GGj7ODZBhhregb40L5KPhUUtty4Im_BQiSi2SWFN0Qg
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
 
 ###
-GET http://localhost:3000/api/proyectos/angular
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
+GET http://localhost:3000/api/proyectos/frontend
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQ3NzIsImV4cGlyZWRBdCI6MTYwMDI0NTA3Mn0.dpm5f34UoGRJPxGeLeCjupXS6yk5wg8grf72uSVwWz4
 ###
 
 POST http://localhost:3000/api/proyectos
 Content-Type: application/json
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDI5MTcsImV4cGlyZWRBdCI6MTYwMDI0MzIxN30.no8q32OmnwdwxjDi4zzwmOynJafoH1CdVFCFiDGeEd0
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
 
 {
     "titulo": "CV Web",
@@ -23,13 +23,15 @@ access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY
 
 PUT http://localhost:3000/api/proyectos/5f565860fcfab438a8c2a635
 Content-Type: application/json
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQ3NzIsImV4cGlyZWRBdCI6MTYwMDI0NTA3Mn0.dpm5f34UoGRJPxGeLeCjupXS6yk5wg8grf72uSVwWz4
 
 {
     "titulo": "Proyecto editado V2",
     "descripcion": "Esta es la descripcion",
     "url": "http://www.google.es",
     "cliente": "Google",
-    "url_cliente": "http://www.google.com/quien-somos"
+    "url_cliente": "http://www.google.com/quien-somos",
+    "categoria": "backend"
 }
 
 ###
