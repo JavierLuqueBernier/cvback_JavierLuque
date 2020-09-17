@@ -1,22 +1,22 @@
 GET http://localhost:3000/api/proyectos
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAzNjg5NTEsImV4cGlyZWRBdCI6MTYwMDgwMDk1MX0.1ZUgb2IKOxtTWGsIh223rCJFAg-_CmGNSftDk4hnnCU
 
 ###
 GET http://localhost:3000/api/proyectos/frontend
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQ3NzIsImV4cGlyZWRBdCI6MTYwMDI0NTA3Mn0.dpm5f34UoGRJPxGeLeCjupXS6yk5wg8grf72uSVwWz4
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAzNjg5NTEsImV4cGlyZWRBdCI6MTYwMDgwMDk1MX0.1ZUgb2IKOxtTWGsIh223rCJFAg-_CmGNSftDk4hnnCU
 ###
 
 POST http://localhost:3000/api/proyectos
 Content-Type: application/json
-access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAyNDQzNTYsImV4cGlyZWRBdCI6MTYwMDI0NDY1Nn0.UMYokQ_AFxgbdxPVXXffFeo1jocwLRLlkM_EoyhrAbw
+access-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c3VhcmlvIjoiSmF2aWVyIiwiY3JlYXRlQXQiOjE2MDAzNjg5NTEsImV4cGlyZWRBdCI6MTYwMDgwMDk1MX0.1ZUgb2IKOxtTWGsIh223rCJFAg-_CmGNSftDk4hnnCU
 
 {
-    "titulo": "CV Web",
+    "titulo": "CV Web NodeJs",
     "descripcion": "Creación de CV Web",
     "url": "http://www.google.es",
     "cliente": "Javier Luque",
     "url_cliente": "http://www.google.com/quien-somos",
-    "categoria": "wordpress"
+    "categoria": "nodejs"
 }
 
 ###
