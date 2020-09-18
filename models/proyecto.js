@@ -9,7 +9,7 @@ let proyectoSchema = new Schema({
     url_cliente: String,
     categoria: {
         type: String,
-        enum: ['angular', 'wordpress', 'nodejs', 'frontend', 'backend']
+        enum: ['angular', 'wordpress', 'nodejs', 'frontend', 'backend', 'javascript']
     }
 });
 
