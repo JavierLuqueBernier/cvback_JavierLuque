@@ -13,7 +13,11 @@ router.get('/', async (req, res) => {
     
 });
 
-router.get('/:categoria', async (req, res) => {
+router.get('/:idProyecto', (req, res) => {
+    const proyecto
+});
+
+router.get('/categoria/:categoria', async (req, res) => {
     try {
         const proyectos = await Proyecto.find({ categoria: req.params.categoria });
         res.json(proyectos);
