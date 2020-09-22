@@ -1,14 +1,16 @@
 <h2 class="mt-5">Lista de proyectos</h2>
 <div class="proyectos row">
+    {{#each proys}}
     <div class="col-3">
-        <div class="proyecto col-3">
-            <h4>NOMBRE</h4>
-            <p>DESCRIPCION</p>
+        <div class="proyecto ">
+            <h4>{{this.titulo}}</h4>
+            <p>{{this.descripcion}}</p>
             <p>
-                <a href="URL">URL proyecto</a>
+                <a href="URL">{{this.url}}</a>
             </p>
-            <p>CLIENTE</p>
-            <p>CATEGORIA</p>
+            <p>{{this.cliente}}</p>
+            <p>{{this.categoria}}</p>
         </div>
     </div>
+    {{/each}}
 </div>
