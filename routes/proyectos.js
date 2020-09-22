@@ -8,7 +8,21 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/new', async (req, res) => {
-    res.render('proyectos/formulario');
+    try {
+        res.render('proyectos/formulario');
+    } catch (err) {
+        res.json({ error: err})
+    }
 });
+
+router.post('/create', async (req, res) => {
+    try {
+        const proyecto = await Proyecto.create(req.body);
+        res.redirect('/proyectos');
+    } catch (err) {
+        res.json({ error: err});
+    }
+    
+})
 
 module.exports = router;
