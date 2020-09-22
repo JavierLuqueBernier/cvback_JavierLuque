@@ -7,4 +7,8 @@ router.get('/', async (req, res) => {
     res.render('proyectos/index', { proys: proyectos });
 });
 
+router.get('/new', async (req, res) => {
+    res.render('proyectos/formulario');
+});
+
 module.exports = router;
