@@ -39,6 +39,20 @@ router.post('/create', upload.single('imagen'), async (req, res) => {
     
 });
 
+/* router.post('/update', upload.single('imagen'), async (req, res) => {
+    const finalPath = req.file.path + '.' + mimeTipeExtension(req.file.mimetype);
+    fs.renameSync(req.file.path, finalPath);
+
+    req.body.imagen = finalPath;
+    try {
+        await Proyecto.findByIdAndUpdate(req.body.proyectoId, req.body);
+        res.redirect('/proyectos');
+    } catch (err) {
+        res.json({ error: err});
+    }
+    
+}); */
+
 function mimeTipeExtension(mimeType) {
     return mimeType.split('/')[1];
 
