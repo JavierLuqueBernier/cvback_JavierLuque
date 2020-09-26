@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const multer = require('express');
+const multer = require('multer');
 const upload = multer({ dest: 'public/images'});
 
 const Proyecto = require('../models/proyecto');
@@ -17,7 +17,9 @@ router.get('/new', async (req, res) => {
     }
 });
 
-router.post('/create', async (req, res) => {
+router.post('/create', upload.single('imagen'), async (req, res) => {
+    console.log(req.file);
+
     try {
         const proyecto = await Proyecto.create(req.body);
         res.redirect('/proyectos');
