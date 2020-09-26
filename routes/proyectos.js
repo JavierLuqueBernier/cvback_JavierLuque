@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/new', async (req, res) => {
+    /* var fullUrl = req.protocol + '://' + req.get('host'); */
     try {
         res.render('proyectos/formulario');
     } catch (err) {
@@ -23,7 +24,7 @@ router.post('/create', upload.single('imagen'), async (req, res) => {
     const finalPath = req.file.path + '.' + mimeTipeExtension(req.file.mimetype);
     fs.renameSync(req.file.path, finalPath);
 
-    
+    req.body.imagen = finalPath;
     
     try {
         const proyecto = await Proyecto.create(req.body);
