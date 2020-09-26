@@ -20,7 +20,7 @@ router.get('/new', async (req, res) => {
 
 router.get('/edit/:proyectoId', async (req, res) => {
     const proyecto = await Proyecto.findById(req.params.proyectoId);
-    res.render('proyectos/formEdit', { proyecto });
+    res.render('proyectos/formEdit', { proy: proyecto }).lean();
 })
 
 router.post('/create', upload.single('imagen'), async (req, res) => {
