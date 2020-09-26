@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const multer = require('express');
+const upload = multer({ dest: 'public/images'});
 
 const Proyecto = require('../models/proyecto');
 
