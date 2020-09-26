@@ -5,8 +5,15 @@ const Proyecto = require('../../models/proyecto');
 
 router.get('/', async (req, res) => {
     try {
-        const proyectos = await Proyecto.find();
-        res.json(proyectos);
+        const proyectos = await Proyecto.find({}).lean();
+        const arrMap = proyectos.map(proyecto => {
+            if (proyecto.imagen) {
+                console.log(proyecto.imagen.indexOf('/'));
+            }
+            let imagen = proyecyo.imagen ? proyecto.imagen.substring(proyecto.imagen.indexOf('/') + 1) : '';
+            return { ...proyecto, imagen: imagen}
+        })
+        res.json(arrMap);
     } catch (err) {
         res.status(503).json({ 'error': err});
     }
@@ -16,7 +23,7 @@ router.get('/', async (req, res) => {
 router.get('/:idProyecto', async (req, res) => {
     try {
         const proyecto = await Proyecto.findById(req.params.idProyecto);
-    res.json(proyecto);
+        res.json(proyecto);
     } catch (err) {
         res,status(503).json({ 'error': err});
     }
