@@ -10,7 +10,8 @@ router.get('/', async (req, res) => {
             if (proyecto.imagen) {
                 console.log(proyecto.imagen.indexOf('/'));
             }
-            let imagen = proyecto.imagen ? proyecto.imagen.substring(proyecto.imagen.indexOf('/') + 1) : '';
+            let imagen = proyecto.imagen ? proyecto.imagen.substring(proyecto.imagen.indexOf('\\') + 1) : '';
+            /* utilizo '\\' en lugar de '/', que sería lo normal, porque por el motivo que sea, en mi base de datos se guarda con \\  */
             return { ...proyecto, imagen: imagen}
         })
         res.json(arrMap);
