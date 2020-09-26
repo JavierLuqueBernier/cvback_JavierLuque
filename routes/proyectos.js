@@ -11,13 +11,17 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/new', async (req, res) => {
-    /* var fullUrl = req.protocol + '://' + req.get('host'); */
     try {
         res.render('proyectos/formulario');
     } catch (err) {
         res.json({ error: err})
     }
 });
+
+router.get('/edit/:proyectoId', async (req, res) => {
+    const proyecto = await Proyecto.findById(req.params.proyectoId);
+    res.render('proyectos/formEdit', { proyecto });
+})
 
 router.post('/create', upload.single('imagen'), async (req, res) => {
     console.log(req.file);
