@@ -23,7 +23,7 @@ router.get('/edit/:proyectoId', async (req, res) => {
     res.render('proyectos/formEdit', { proy: proyecto });
 })
 
-router.post('/create', upload.single('imagen'), async (req, res) => {
+/* router.post('/create', upload.single('imagen'), async (req, res) => {
     console.log(req.file);
     const finalPath = req.file.path + '.' + mimeTipeExtension(req.file.mimetype);
     fs.renameSync(req.file.path, finalPath);
@@ -37,7 +37,7 @@ router.post('/create', upload.single('imagen'), async (req, res) => {
         res.json({ error: err});
     }
     
-});
+}); */
 
 /* router.post('/update', upload.single('imagen'), async (req, res) => {
     const finalPath = req.file.path + '.' + mimeTipeExtension(req.file.mimetype);
@@ -53,9 +53,9 @@ router.post('/create', upload.single('imagen'), async (req, res) => {
     
 }); */
 
-function mimeTipeExtension(mimeType) {
+/* function mimeTipeExtension(mimeType) {
     return mimeType.split('/')[1];
 
-}
+} */
 
 module.exports = router;
