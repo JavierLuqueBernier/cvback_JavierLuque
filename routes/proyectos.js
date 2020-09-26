@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const multer = require('multer');
 const upload = multer({ dest: 'public/images'});
+const fs = require('fs');
 
 const Proyecto = require('../models/proyecto');
 
@@ -19,7 +20,11 @@ router.get('/new', async (req, res) => {
 
 router.post('/create', upload.single('imagen'), async (req, res) => {
     console.log(req.file);
+    const finalPath = req.file.path + '.' + mimeTipeExtension(req.file.mimetype);
+    fs.renameSync(req.file.path, finalPath);
 
+    
+    
     try {
         const proyecto = await Proyecto.create(req.body);
         res.redirect('/proyectos');
@@ -27,6 +32,11 @@ router.post('/create', upload.single('imagen'), async (req, res) => {
         res.json({ error: err});
     }
     
-})
+});
+
+function mimeTipeExtension(mimeType) {
+    return mimeType.split('/')[1];
+
+}
 
 module.exports = router;
